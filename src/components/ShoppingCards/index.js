@@ -12,6 +12,25 @@ export function ShoppingCards(props) {
           <p className="text-3xl font-bold text-gray-900 dark:text-white">
             R${`${props.price}`}
           </p>
+          <p>{props.quantity}</p>
+          <span
+            className="w-9 h-9 bg-black rounded-full"
+            onClick={props.onPressRemoveItem}
+          >
+            x
+          </span>
+          <span
+            className="w-9 h-9 bg-black rounded-full"
+            onClick={props.onPressRemoveItemAmount}
+          >
+            -
+          </span>
+          <span
+            className="w-9 h-9 bg-black rounded-full"
+            onClick={props.onPressUp}
+          >
+            +
+          </span>
         </div>
       </div>
     </>

@@ -1,4 +1,6 @@
-export function Navbar() {
+import Cart from "../../images/Cart.svg";
+
+export function Navbar(props) {
   return (
     <>
       <div className="flex items-center justify-end pl-96 pr-20 py-7 bg-blue-800">
@@ -9,9 +11,9 @@ export function Navbar() {
           <p className="w-48 h-11 text-xl font-light leading-tight text-white">
             Sistemas
           </p>
-          <div className="flex space-x-4 items-center justify-end flex-1 h-full pl-4 pr-7 pt-2.5 pb-3 bg-white rounded-lg">
-            <div className="w-5 h-4 bg-black rounded-lg" />
-            <p className="text-lg font-bold">0</p>
+          <div className="flex justify-center justify-between py-3.5 w-24 h-11 bg-white rounded-lg">
+            <img src={Cart} alt="Cart" className="h-5 w-5" />
+            <p className="text-lg font-bold">{props.allCartProduct}</p>
           </div>
         </div>
       </div>
