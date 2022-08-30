@@ -3,6 +3,7 @@ import axios from "axios";
 import { Navbar } from "../../components/Navbar";
 import { Cards } from "../../components/Cards";
 import { ShoppingCart } from "../../components/ShoppingCart";
+import ShoppingBag from "../../images/shopping-bag.svg";
 
 export function Homepage() {
   const [products, setProducts] = useState([]);
@@ -111,21 +112,27 @@ export function Homepage() {
         onPressUp={onPressUp}
         cartTotal={cartTotal}
       />
-      <div>
+      <div
+        id="productList"
+        className="grid grid-cols-4 gap-8 w-10/12 m-auto mt-24"
+      >
         {products.map((product, key) => {
           return (
-            <div key={key}>
+            <div id={`product-${product.id}`} className="productItem" key={key}>
               <Cards
                 name={product.name}
                 photo={product.photo}
                 price={product.price}
                 description={product.description}
               />
-              <button
-                className="w-56 h-8 bg-blue-800 rounded-bl-lg rounded-br-lg text-sm font-semibold text-center text-white"
-                onClick={() => handleSubmit(product)}
-              >
-                COMPRAR
+
+              <button className="w-full" onClick={() => handleSubmit(product)}>
+                <div className="flex items-center justify-center p-4 bg-[#0F52BA] rounded-bl-lg rounded-br-lg">
+                  <img className="" src={ShoppingBag} alt="" />
+                  <span className="text-sm font-semibold leading-none text-white uppercase pl-3">
+                    Comprar
+                  </span>
+                </div>
               </button>
             </div>
           );
