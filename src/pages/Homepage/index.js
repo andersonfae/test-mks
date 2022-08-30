@@ -4,6 +4,7 @@ import { Navbar } from "../../components/Navbar";
 import { Cards } from "../../components/Cards";
 import { ShoppingCart } from "../../components/ShoppingCart";
 import ShoppingBag from "../../images/shopping-bag.svg";
+import { Footer } from "../../components/Footer";
 
 export function Homepage() {
   const [products, setProducts] = useState([]);
@@ -114,7 +115,7 @@ export function Homepage() {
       />
       <div
         id="productList"
-        className="grid grid-cols-4 gap-8 w-10/12 m-auto mt-24"
+        className="grid grid-cols-1 gap-8 w-10/12 m-auto mt-24 md:grid-cols-4"
       >
         {products.map((product, key) => {
           return (
@@ -138,6 +139,7 @@ export function Homepage() {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 }

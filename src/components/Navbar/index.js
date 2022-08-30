@@ -2,8 +2,6 @@ import Cart from "../../images/Cart.svg";
 import { useState } from "react";
 
 export function Navbar(props) {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
   return (
     <>
       <header
@@ -17,23 +15,10 @@ export function Navbar(props) {
           </span>
         </h1>
 
-        <div
-          className={`flex space-x-4 items-center justify-end px-6 py-3 bg-white rounded-lg ${
-            isNavOpen ? "showMenuNav" : "hideMenuNav"
-          }`}
-          onClick={() => setIsNavOpen(false)}
-        >
+        <div className="flex space-x-4 items-center justify-end px-6 py-3 bg-white rounded-lg">
           <img src={Cart} alt="Cart" className="h-5 w-5" />
           <p className="text-lg font-bold">{props.allCartProduct}</p>
         </div>
-        <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-
-      }
-    `}</style>
       </header>
     </>
   );

@@ -5,7 +5,7 @@ export function ShoppingCart(props) {
     <>
       <aside
         id="cartSideBar"
-        className="fixed flex flex-col justify-end bg-[#0F52BA] right-0 top-0 z-50 text-white h-full shadow-lg shadow-black w-[32rem]"
+        className="fixed flex flex-col justify-end bg-[#0F52BA] right-0 top-0 z-50 text-white h-full shadow-lg shadow-black w-full md:w-[32rem]"
       >
         <div className="inner-content p-8 grow">
           <h2 className="text-4xl font-bold text-white my-8">
@@ -31,7 +31,7 @@ export function ShoppingCart(props) {
           </div>
         </div>
         <footer className="flex flex-col space-y-11 items-center justify-start">
-          <div className="inline-flex space-x-52 items-start justify-start w-96">
+          <div className="inline-flex space-x-52 items-start justify-start mx-4">
             <span className="flex-1 text-3xl font-bold leading-none text-white">
               Total:
             </span>
