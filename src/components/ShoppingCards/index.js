@@ -31,7 +31,7 @@ export function ShoppingCards(props) {
           </span>
         </div>
         <div className="metaPrice text-sm font-bold leading-none mt-4">
-          R${`${props.price}`}
+          R${Math.trunc(`${props.price}`)}
         </div>
       </div>
     </>

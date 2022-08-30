@@ -10,7 +10,7 @@ export function Cards(props) {
             <span className="text-3xl leading-tight text-gray-800">{`${props.name}`}</span>
             <div className="flex items-center justify-center py-1 px-1.5 bg-gray-800 rounded">
               <div className="flex text-base font-bold leading-none text-white">
-                R${`${props.price}`}
+                R${Math.trunc(`${props.price}`)}
               </div>
             </div>
           </div>

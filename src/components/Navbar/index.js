@@ -1,5 +1,4 @@
 import Cart from "../../images/Cart.svg";
-import { useState } from "react";
 
 export function Navbar(props) {
   return (

@@ -15,18 +15,20 @@ export function ShoppingCart(props) {
             ✖
           </span>
           <div className="space-y-4">
-            {props.cart?.items?.map((currentItem) => (
-              <ShoppingCards
-                name={currentItem.name}
-                photo={currentItem.photo}
-                price={currentItem.price}
-                quantity={currentItem.quantity}
-                onPressRemoveItem={() => props.onPressRemoveItem(currentItem)}
-                onPressRemoveItemAmount={() =>
-                  props.onPressRemoveItemAmount(currentItem)
-                }
-                onPressUp={() => props.onPressUp(currentItem)}
-              />
+            {props.cart?.items?.map((currentItem, key) => (
+              <div key={key}>
+                <ShoppingCards
+                  name={currentItem.name}
+                  photo={currentItem.photo}
+                  price={currentItem.price}
+                  quantity={currentItem.quantity}
+                  onPressRemoveItem={() => props.onPressRemoveItem(currentItem)}
+                  onPressRemoveItemAmount={() =>
+                    props.onPressRemoveItemAmount(currentItem)
+                  }
+                  onPressUp={() => props.onPressUp(currentItem)}
+                />
+              </div>
             ))}
           </div>
         </div>
